@@ -1,0 +1,25 @@
+{
+  "name": "electron-builder-demo",
+  "version": "1.0.0",
+  "description": "electron builder demo",
+  "main": "src/main/index.js",
+  "license": "MIT",
+  "build": {
+    "win": {
+      "target":[ "nsis"],
+      "icon":"build/icon.ico"
+    },
+    "nsis":{
+      "include":"build/install.nsh",
+      "oneClick":false
+    }
+  },
+  "scripts": {
+    "dev":"electron ./src/main/index.js",
+    "dist":"electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^25.1.1",
+    "electron-builder": "^24.4.0"
+  }
+}
